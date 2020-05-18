@@ -15,20 +15,24 @@ namespace aisolver
 		
 		int initialNode;
 		int goalNode;
-		std::vector<int> nodes;
-		std::vector<std::string> alias;
+		std::vector<int> nodes_int;
+		std::vector<std::string> nodes;
 		std::vector<std::vector<float>> adjacency;
 		std::vector<int> path;
 
 	private:
 		bool contains(std::vector<int> vector, int value);
+		std::vector<int> generateNodes(std::vector<std::string> alias);
+		int nodeAliastoInt(std::string node);		
 
 	public:
-		BFSSolver(std::vector<int> nodes, std::vector<std::string> alias, std::vector<std::vector<float>> adjacency, int initialNode, int goalNode);
+		BFSSolver(std::vector<std::string> alias, std::vector<std::vector<float>> adjacency, std::string initialNode, std::string goalNode);
 		
 		void showQueue();
+		void showVisited();
 		void showPath();
 		std::vector<int> solve();
+		float getPathCost();
 	};
 
 }
