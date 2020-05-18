@@ -160,3 +160,45 @@ project "dfsexample02"
 	filter { "configurations:Debug" } defines { "DEBUG" } symbols "On"			
 	filter { "configurations:Release" } defines { "NDEBUG" } optimize "On"
 
+
+
+--GREEDYBFSEXAMPLE01	
+		
+project "greedybfsexample01"
+	location "examples/greedybfsexample01"
+	kind "ConsoleApp"
+	language "C++"
+	
+	targetdir ("bin/" .. outputdir)
+	objdir ("bin-int/" .. outputdir)
+	
+	files { "examples/greedybfsexample01/main.cpp" }		
+	includedirs { "aisolver/include" }		
+	links { "aisolver" }	
+	
+	filter { "system:window" } cppdialect "C++17" staticruntime "On" systemversion "8.1"		
+	
+	filter { "configurations:Debug" } defines { "DEBUG" } symbols "On"			
+	filter { "configurations:Release" } defines { "NDEBUG" } optimize "On"
+	
+
+
+--GREEDYBFSEXAMPLE02	
+		
+project "greedybfsexample02"
+	location "examples/greedybfsexample02"
+	kind "ConsoleApp"
+	language "C++"
+	
+	targetdir ("bin/" .. outputdir)
+	objdir ("bin-int/" .. outputdir)
+	
+	files { "examples/greedybfsexample02/main.cpp" }		
+	includedirs { "aisolver/include" }		
+	links { "aisolver" }				
+	
+	filter { "system:window" } cppdialect "C++17" staticruntime "On" systemversion "8.1"		
+	
+	filter { "configurations:Debug" } defines { "DEBUG" } symbols "On"			
+	filter { "configurations:Release" } defines { "NDEBUG" } optimize "On"
+	

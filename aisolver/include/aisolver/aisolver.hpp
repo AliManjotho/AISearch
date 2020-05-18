@@ -10,4 +10,7 @@
 //BFS
 #include "aisolver/bfs/bfssolver.hpp"
 
+//GREEDYBFS
+#include "aisolver/greedybfs/greedybfssolver.hpp"
+
 #endif //AISOLVER_AISOLVER_HPP
